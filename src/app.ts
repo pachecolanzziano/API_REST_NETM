@@ -13,4 +13,4 @@ db()
 .then(() => console.log("DB connection established"))
 .catch((error) => console.error(error));
 
-app.listen(PORT, ()=>console.log('Est: ON, Port:', PORT));
+app.listen(PORT, ()=>console.log('Est: ✅, Port:', PORT));
