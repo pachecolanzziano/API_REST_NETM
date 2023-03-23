@@ -18,13 +18,13 @@ const getCar = async (id: string) => {
 };
 
 //build  update, delete in service and controller✅
-const updateCar = async (id: string, data:Car) => {
-    const responseUpdate = await ItemModel.findOneAndUpdate({_id: id} , data, {new: true});
+const updateCar =  (id: string, data:Car) => {
+    const responseUpdate = ItemModel.findOneAndUpdate({_id: id} , data, {new: true});
     return (responseUpdate);
 };
 
-const deleteCar = async (id: string) => {
-    const responseItem = await ItemModel.deleteOne({_id: id});
+const deleteCar =  (id: string) => {
+    const responseItem =  ItemModel.deleteOne({_id: id});
     return responseItem;
 };
 

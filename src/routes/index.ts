@@ -9,21 +9,15 @@ const cleanFileName = (fileName: string) => {
   return file;
 };
 
-// cargador dinamico de rutas (const rutas, fue puesto por mi)
+// cargador dinamico de rutas (const rutas,funciona sin la asignacion de la constante )
 const rutas = readdirSync(PATH_ROUTER).filter((fileName) => {
   const cleanName = cleanFileName(fileName);
   if (cleanName !== "index") {
-    console.log(`se esta cargarndo la ruta .... ${cleanName}`);
     import(`./${cleanName}`)
     .then((moduleRouter) => {
-      console.log(cleanName);
-      
       router.use(`/${cleanName}`, moduleRouter.router);
       })
   }
 });
-
-
-
 
 export { router };

@@ -35,6 +35,6 @@ const ItemSchema = new Schema<Car>(
   }
 );
 
-// model("nombre de la 'tabla' en mongo",  name_schema)
+// const nameConst = model("nombre de la 'tabla' en mongo",  name_schema)
 const ItemModel = model("items", ItemSchema);
 export default ItemModel;

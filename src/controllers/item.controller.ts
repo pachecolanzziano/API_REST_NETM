@@ -22,8 +22,8 @@ const getItems = async(req: Request, res: Response) => {
   }
 };
 
-const updateItem = async (req: Request, res: Response) => {
-  const responseItem = await updateCar(req.params.id, req.body );
+const updateItem = (req: Request, res: Response) => {
+  const responseItem = updateCar(req.params.id, req.body );
   res.send(responseItem);
 };
 
@@ -36,16 +36,14 @@ const postItem = async ({ body }: Request, res: Response) => {
   }
 };
 
-const deleteItem = async ({ params }: Request, res: Response) => {
+const deleteItem =  ({ params }: Request, res: Response) => {
   try {
     const { id } = params;
-    const response = await deleteCar(id);
+    const response = deleteCar(id);
     res.send(response);
   } catch (e) {
     handleHttp(res, "💥ERROR_DELETE_ITEM", e);
   }
 };
-
-console.log('aqui estoy controller');
 
 export { getItem, getItems, updateItem, postItem, deleteItem };
