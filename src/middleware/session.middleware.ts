@@ -7,9 +7,10 @@ const checkJwt = (req: RequestExt, res: Response, next: NextFunction) => {
     const jwtByUser = req.headers.authorization || "";
     const jwt = jwtByUser.split(" ").pop();
     //jwt => debe ser un string. de esta se logra `${ value }`.
-    const isUser = verifyToken(`${jwt}`);
+    const isUser = verifyToken(`${jwt}`) as { id: string };;
     if (!isUser) {
-      res.status(401), res.send("NO_TIENES_UN_JWT_VALIDO");
+      res.status(401), 
+      res.send("NOT_JWT_VALIDO");
     } else {
       req.user = isUser;
       next();
