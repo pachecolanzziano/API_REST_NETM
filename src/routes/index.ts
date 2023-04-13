@@ -13,8 +13,10 @@ const cleanFileName = (fileName: string) => {
 const rutas = readdirSync(PATH_ROUTER).filter((fileName) => {
   const cleanName = cleanFileName(fileName);
   if (cleanName !== "index") {
-    import(`./${cleanName}`)
+    import(`./${cleanName}`) 
     .then((moduleRouter) => {
+      
+      console.log(cleanName);
       router.use(`/${cleanName}`, moduleRouter.router);
       })
   }
