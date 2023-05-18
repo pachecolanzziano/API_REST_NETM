@@ -1,5 +1,5 @@
 {
-  "name": "api_citas",
+  "name": "api_rest_netm",
   "version": "1.0.0",
   "description": "API RES Node Express TypeScript Mongo",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pachecolanzziano/API_CITAS.git"
+    "url": "git+https://github.com/pachecolanzziano/API_REST_NETM.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pachecolanzziano/API_CITAS/issues"
+    "url": "https://github.com/pachecolanzziano/API_REST_NETM/issues"
   },
-  "homepage": "https://github.com/pachecolanzziano/API_CITAS#readme",
+  "homepage": "https://github.com/pachecolanzziano/API_REST_NETM#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
